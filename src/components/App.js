@@ -4,16 +4,17 @@ import "../styles/App.css";
 const App = () => {
   // write your code here
   const [currentTime, setTime] = useState(0);
-
+  let id = 0;
   const timer = (event) => {
     if (event.keyCode === 13) {
       setTime(event.target.value);
+      clearInterval(id);
     }
   };
   const updatetimer = () => {
     let value = currentTime;
     if (currentTime != 0) {
-      const id = setTimeout(() => {
+      id = setTimeout(() => {
         setTime(currentTime - 1);
       }, 1000);
     }
