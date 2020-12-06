@@ -9,7 +9,7 @@ const App = () => {
     if (event.keyCode === 13) {
       let value = Math.floor(event.target.value);
       setTime(value);
-      clearInterval(id);
+      clearTimeout(id);
     }
   };
   const updatetimer = () => {
