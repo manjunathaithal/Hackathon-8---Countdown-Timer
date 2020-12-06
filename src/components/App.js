@@ -7,7 +7,8 @@ const App = () => {
   let id = 0;
   const timer = (event) => {
     if (event.keyCode === 13) {
-      setTime(event.target.value);
+      let value = Math.floor(event.target.value);
+      setTime(value);
       clearInterval(id);
     }
   };
